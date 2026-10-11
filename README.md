@@ -84,13 +84,13 @@ The package mirrors the original PHP namespaces:
 Install from source:
 
 ```bash
-python -m pip install .
+python3 -m pip install .
 ```
 
 For development (editable install):
 
 ```bash
-python -m pip install -e .
+python3 -m pip install -e .
 ```
 
 ## Usage
@@ -148,7 +148,7 @@ while True:
 A complete runnable example is available in [`examples/echo_server.py`](examples/echo_server.py):
 
 ```bash
-python examples/echo_server.py 0.0.0.0 19132
+python3 examples/echo_server.py 0.0.0.0 19132
 ```
 
 ## Tools
@@ -156,8 +156,8 @@ python examples/echo_server.py 0.0.0.0 19132
 Two command-line tools are included:
 
 ```bash
-python tools/scan.py <broadcast-address> <port>    # broadcast RakNet pings and print pongs
-python tools/proxy.py [server-address] [server-port]  # UDP proxy with cached ping responses
+python3 tools/scan.py <broadcast-address> <port>    # broadcast RakNet pings and print pongs
+python3 tools/proxy.py [server-address] [server-port]  # UDP proxy with cached ping responses
 ```
 
 ## Tests
@@ -167,7 +167,7 @@ implemented packet types, both IPv4 and IPv6 address encoding, and all reliabili
 integration test performs a real RakNet handshake over UDP against a running server instance.
 
 ```bash
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 ```
 
 ## Contributing
