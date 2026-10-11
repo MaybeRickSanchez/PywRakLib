@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pywraklib"
+version = "0.1.0"
+description = "An unofficial Python port of PocketMine-MP's RakLib RakNet server library."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE.md"]
+requires-python = ">=3.10"
+authors = [
+    { name = "Amirreza Prime" },
+]
+maintainers = [
+    { name = "Amirreza Prime" },
+]
+keywords = [
+    "raknet",
+    "raklib",
+    "minecraft-bedrock",
+    "udp",
+    "networking",
+    "python",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment",
+    "Topic :: System :: Networking",
+]
+
+[project.urls]
+Homepage = "https://github.com/MaybeRickSanchez/PywRakLib"
+Source = "https://github.com/MaybeRickSanchez/PywRakLib"
+Issues = "https://github.com/MaybeRickSanchez/PywRakLib/issues"
+Upstream = "https://github.com/pmmp/RakLib"
+
+[project.scripts]
+raklib-proxy = "tools.proxy:main"
+raklib-scan = "tools.scan:main"
+
+[tool.setuptools.packages.find]
+include = ["raklib*", "tools*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
